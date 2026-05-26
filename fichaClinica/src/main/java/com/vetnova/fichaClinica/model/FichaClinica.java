@@ -1,4 +1,6 @@
 package com.vetnova.fichaClinica.model;
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +29,7 @@ public class FichaClinica {
     @Column(length = 200, nullable = false)
     private String tratamiento;
 
-    @Column(length = 200, nullable = false)
-    private String fecha;
+    @Column(nullable = true)
+    private LocalDate fechaConsulta;
+    
 }

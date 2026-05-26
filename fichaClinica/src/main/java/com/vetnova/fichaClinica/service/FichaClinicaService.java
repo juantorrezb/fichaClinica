@@ -25,4 +25,8 @@ public class FichaClinicaService {
     public Optional<FichaClinica> obtenerFichaClinicaPorId(Long id) {
         return fichaClinicaRepository.findById(id);
     }
+
+    public void eliminarFichaClinica(Long id) {
+        fichaClinicaRepository.deleteById(id);
+    }
 }

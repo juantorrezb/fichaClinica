@@ -44,6 +44,12 @@ public class FichaClinicaController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(ficha, HttpStatus.OK);
-
     }
+
+    @PostMapping("/eliminar/{id}")
+    public ResponseEntity<Void> eliminarFicha(@PathVariable Long id){
+        fichaClinicaService.eliminarFichaClinica(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+    
 }
